@@ -1,31 +1,98 @@
-# API
+# API - Aprendizem por Projetos Integrados 2021-02
 Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre de ADS
 
 
-Exemplo de sumario
 *******
-## indice do documento
+## Índice
 
- 1. [seção 01](#section-01)
- 2. [Seção 02](#section-02)
- 3. [Seção 03](#section-03)<br>
-   3.1. [Sub Seção](#sub-section-01)<br>
+* [Proposta](#proposta)
+* [Introdução](#introducao)<br>
+  * [Definição do Problema](#definicao)
+  * [Objetivo](#objetivo)
+* [Planejamento de Desenvolvimento - Sprints](#sprint)
+* [Tecnologias Utilizadas](#tecnologias)
+  * [Gerenciamento](#gerenciamento)
+  * [Desenvolvimento](#desenvolvimento)
+* [Protótipo](#prototipo)
+* [Banco de Dados](#banco)
+* [Equipe de Desenvolvimento](#equipe)
+* [Professores Orientadores](#professores)
  
  
  --------------------------
  
  <div id='section-01'/>  
- TITULO 01
- <div id='section-02'/>  
- TITULO 02
- <div id='section-03'/>  
- TITULO 03
- <div id='sub-section-01'/> 
+  
  
- <!---->
+ ## 📝 Proposta <div id='proposta'/>
  
- (Apenas uma copia do projeto anterior, ja que incluo todo o pessoal aqui ;))
- ## Equipe de Desevolvimento
+ Este é um repositório referente a API (Aprendizagem por Projetos Integrados), que envolve
+ as seguintes disciplinas do 6º semestre do curso de Análise e Desenvolvimentos de Sistemas da Fatec-SJC 
+ (Faculdade de Tecnologia de São José dos Campos), 2º semestre de 2021: 
+ - Inteligência Artificial	 
+ - Tópicos Especiais em Informática	
+ - Gerenciamento de Projetos
+ - Gestão e Gerenciamento de TI	
+ - Gestão de Equipes	
+ - Empreendedorismo	
+ 
+ A proposta desse projeto é desenvolver um software capaz de resolver o problema proposto pela
+ empresa [UOL](https://www.uol.com.br/), que é a empresa parceira desse projeto API.
+ 
+ ## 💡 Introdução <div id='introducao'/>
+ 
+ A [UOL](https://www.uol.com.br/) é uma empresa brasileira fornecedora de conteúdo, produtos e serviços da 
+ Internet, dentre esses serviços tem o [BOL - Brasil Online](https://www.bol.uol.com.br/) que é um portal 
+ de internet, serviço de webmail.
+ 
+ ### ⚠ Definição do Problema <div id='definicao'/>
+ 
+ Vem aumentando constantemente o números de spammers,são os responsáveis por enviar mensagens não 
+ solicitadas, a maioria publicitária enviadas em massa, que nos mais conhecemos como mensagens de spam
+ de e-mail (Do termo “Sending and Posting Advertisement in Mass” (trafego de publicidade em massa) ou “Stupid 
+ Pointless Annoying Messages” (mensagem de propósito irritante)), porém alguns desses e-mails podem conter
+ links e arquivos com códigos maliciosos.
+ 
+ ### 🎯 Objetivo <div id='objetivo'/>
+ 
+ Os spammers geralmente criam várias contas de e-mail para conseguir enviar uma quantidade maior de spam
+ para mais pessoas. O intuito desse projeto é desenvolver um software que seja capaz de identificar todas as
+ contas que possuam esse mesmo usuário spammer criou, para que posteriormente alguma providência seja tomada.
+ O problema é que esses spammer maliciosos geralmente fraudam suas informações de IP do computador, celular e
+ entre outras informações para que são solicitadas/coletadas em seu cadastro de e-mail.
+ 
+ ## 📚 Planejamento de Desenvolvimento - Sprints <div id='aprint'/>
+ 🚧Em planejamento... 
+ 
+ ## 🛠 Tecnologias Utilizadas <div id='tecnologias'/>
+ Para o desenvolvimento desse projeto foi determinada a utilização de tecnologias adequadas para o contexto. 
+ Estas tecnologias selecionadas foram agrupadas por áreas de atuação e cada uma é detalhada sobre sua 
+ utilidade dentro do projeto, elas são:
+  
+ ### 📊 Gerenciamento <div id='gerenciamento'/>
+ - Azure Devops
+ - Figma
+ - MS Project
+ - Eclipse
+ 
+ ### 🏗 Desenvolvimento <div id='desenvolvimento'/>
+ - Spring Boot
+ - React
+ - PostgreSQL
+ Veja mais detalhes sobre as tecnologias utilizadas...
+ 
+ ## 💻 Protótipo <div id='prototipo'/>
+ A prototipação é essencial para a visualização do projeto antes de começar o desenvolvimento. Para 
+ visualizar a prototipação dessa aplicação e navegar entre as telas acesse o link.
+ Veja mais detalhes sobre as telas prototipadas...
+ 
+ ## 🎲 Banco de Dados <div id='banco'/>
+ O banco de dados é uma parte essencial de uma aplicação. Ele é o responsável por armazenar os dados que 
+ poderão ser transformados em informações importantes para o usuário.
+ Veja mais detalhes sobre o banco de dados do projeto...
+  
+  
+ ## 👨‍👩‍👧‍👦 Equipe de Desevolvimento <div id='equipe'/> 
  
 <table>
   <tbody>
@@ -102,3 +169,10 @@ Exemplo de sumario
    </tr>
   </tbody>
 </table>
+
+## 👨🏻‍🏫 Professores Orientadores <div id='professores'/> 
+* Eduardo Sakaue
+* José Walmir Gonçalves Duque		
+* Emanuel Mineda Carneiro		
+* Claudio Etelvino de Lima		
+* Valter João de Souza		
