@@ -30,13 +30,6 @@ Exemplo de sumario
 <table>
   <tbody>
     <tr> 
-<!--BRUNA GOMES-->      <td align="center">
-        <a href="https://github.com/littlebru">
-          <img src="https://avatars.githubusercontent.com/u/41810923?s=460&u=029d64b8455acde0706bb3beffddd428fd6f4dd2&v=4" width="100px;" alt="Foto da Bruna Gomes no GitHub" style="max-width:100%;"></a><br><br>
-          <b>Bruna Gomes</b><br>
-        <a href="https://github.com/littlebru"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
-       <a href="https://www.linkedin.com/in/bru-gomes/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
-      </td>
 <!--BRENDO BUBELA-->      <td align="center">
         <a href="https://github.com/BrendoVidal">
           <img src="https://avatars.githubusercontent.com/u/51121221?s=460&v=4" width="100px;" alt="Foto do Brendo Bubela no GitHub" style="max-width:100%;"></a><br><br>
@@ -44,6 +37,13 @@ Exemplo de sumario
         <a href="https://github.com/BrendoVidal"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
        <a href="https://www.linkedin.com/in/brendo-bubela-1978221b6/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
       </td>     
+<!--BRUNA GOMES-->      <td align="center">
+        <a href="https://github.com/littlebru">
+          <img src="https://avatars.githubusercontent.com/u/41810923?s=460&u=029d64b8455acde0706bb3beffddd428fd6f4dd2&v=4" width="100px;" alt="Foto da Bruna Gomes no GitHub" style="max-width:100%;"></a><br><br>
+          <b>Bruna Gomes</b><br>
+        <a href="https://github.com/littlebru"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/bru-gomes/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
+      </td>
 <!--CHRISTIAN DANTAS-->      <td align="center">
         <a href="https://github.com/ChristianDantasGermano">
           <img src="https://avatars.githubusercontent.com/u/51031714?s=460&v=4" width="100px;" alt="Foto do Christian Dantas no GitHub" style="max-width:100%;"></a><br><br>
