@@ -22,6 +22,7 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  --------------------------
    
  <div id='proposta'/>
+ 
  ## 📝 Proposta 
  
  Este é um repositório referente a API (Aprendizagem por Projetos Integrados), que envolve
@@ -38,12 +39,14 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  empresa [UOL](https://www.uol.com.br/), que é a empresa parceira desse projeto API.
  
  <div id='introducao'/>
+ 
  ## 💡 Introdução 
  A [UOL](https://www.uol.com.br/) é uma empresa brasileira fornecedora de conteúdo, produtos e serviços da 
  Internet, dentre esses serviços tem o [BOL - Brasil Online](https://www.bol.uol.com.br/) que é um portal 
  de internet, serviço de webmail.
  
  <div id='definicao'/>
+ 
  ### ⚠ Definição do Problema 
  Vem aumentando constantemente o números de spammers,são os responsáveis por enviar mensagens não 
  solicitadas, a maioria publicitária enviadas em massa, que nos mais conhecemos como mensagens de spam
@@ -52,6 +55,7 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  links e arquivos com códigos maliciosos.
  
  <div id='objetivo'/>
+ 
  ### 🎯 Objetivo 
  Os spammers geralmente criam várias contas de e-mail para conseguir enviar uma quantidade maior de spam
  para mais pessoas. O intuito desse projeto é desenvolver um software que seja capaz de identificar todas as
@@ -60,16 +64,19 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  entre outras informações para que são solicitadas/coletadas em seu cadastro de e-mail.
  
  <div id='sprint'/>
+ 
  ## 📚 Planejamento de Desenvolvimento - Sprints 
  🚧Em planejamento... 
  
  <div id='tecnologias'/>
+ 
  ## 🛠 Tecnologias Utilizadas 
  Para o desenvolvimento desse projeto foi determinada a utilização de tecnologias adequadas para o contexto. 
  Estas tecnologias selecionadas foram agrupadas por áreas de atuação e cada uma é detalhada sobre sua 
  utilidade dentro do projeto, elas são:
 
 <div id='gerenciamento'/>
+ 
  ### 📊 Gerenciamento 
  - Azure Devops
  - Figma
@@ -77,6 +84,7 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  - Eclipse
  
  <div id='desenvolvimento'/>
+ 
  ### 🏗 Desenvolvimento 
  - Spring Boot
  - React
@@ -84,18 +92,21 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  Veja mais detalhes sobre as tecnologias utilizadas...
  
  <div id='prototipo'/>
+ 
  ## 💻 Protótipo 
  A prototipação é essencial para a visualização do projeto antes de começar o desenvolvimento. Para 
  visualizar a prototipação dessa aplicação e navegar entre as telas acesse o link.
  Veja mais detalhes sobre as telas prototipadas...
  
  <div id='banco'/>
+ 
  ## 🎲 Banco de Dados 
  O banco de dados é uma parte essencial de uma aplicação. Ele é o responsável por armazenar os dados que 
  poderão ser transformados em informações importantes para o usuário.
  Veja mais detalhes sobre o banco de dados do projeto...
   
  <div id='equipe'/> 
+ 
  ## 👨‍👩‍👧‍👦 Equipe de Desevolvimento  
  
 <table>
@@ -175,6 +186,7 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
 </table>
 
 <div id='professores'/>
+
 ## 👨🏻‍🏫 Professores Orientadores  
 * Eduardo Sakaue
 * José Walmir Gonçalves Duque		
