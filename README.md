@@ -20,11 +20,9 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  
  
  --------------------------
- 
- <div id='section-01'/>  
-  
- 
- ## 📝 Proposta <div id='proposta'/>
+   
+ <div id='proposta'/>
+ ## 📝 Proposta 
  
  Este é um repositório referente a API (Aprendizagem por Projetos Integrados), que envolve
  as seguintes disciplinas do 6º semestre do curso de Análise e Desenvolvimentos de Sistemas da Fatec-SJC 
@@ -39,60 +37,66 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
  A proposta desse projeto é desenvolver um software capaz de resolver o problema proposto pela
  empresa [UOL](https://www.uol.com.br/), que é a empresa parceira desse projeto API.
  
- ## 💡 Introdução <div id='introducao'/>
- 
+ <div id='introducao'/>
+ ## 💡 Introdução 
  A [UOL](https://www.uol.com.br/) é uma empresa brasileira fornecedora de conteúdo, produtos e serviços da 
  Internet, dentre esses serviços tem o [BOL - Brasil Online](https://www.bol.uol.com.br/) que é um portal 
  de internet, serviço de webmail.
  
- ### ⚠ Definição do Problema <div id='definicao'/>
- 
+ <div id='definicao'/>
+ ### ⚠ Definição do Problema 
  Vem aumentando constantemente o números de spammers,são os responsáveis por enviar mensagens não 
  solicitadas, a maioria publicitária enviadas em massa, que nos mais conhecemos como mensagens de spam
  de e-mail (Do termo “Sending and Posting Advertisement in Mass” (trafego de publicidade em massa) ou “Stupid 
  Pointless Annoying Messages” (mensagem de propósito irritante)), porém alguns desses e-mails podem conter
  links e arquivos com códigos maliciosos.
  
- ### 🎯 Objetivo <div id='objetivo'/>
- 
+ <div id='objetivo'/>
+ ### 🎯 Objetivo 
  Os spammers geralmente criam várias contas de e-mail para conseguir enviar uma quantidade maior de spam
  para mais pessoas. O intuito desse projeto é desenvolver um software que seja capaz de identificar todas as
  contas que possuam esse mesmo usuário spammer criou, para que posteriormente alguma providência seja tomada.
  O problema é que esses spammer maliciosos geralmente fraudam suas informações de IP do computador, celular e
  entre outras informações para que são solicitadas/coletadas em seu cadastro de e-mail.
  
- ## 📚 Planejamento de Desenvolvimento - Sprints <div id='aprint'/>
+ <div id='sprint'/>
+ ## 📚 Planejamento de Desenvolvimento - Sprints 
  🚧Em planejamento... 
  
- ## 🛠 Tecnologias Utilizadas <div id='tecnologias'/>
+ <div id='tecnologias'/>
+ ## 🛠 Tecnologias Utilizadas 
  Para o desenvolvimento desse projeto foi determinada a utilização de tecnologias adequadas para o contexto. 
  Estas tecnologias selecionadas foram agrupadas por áreas de atuação e cada uma é detalhada sobre sua 
  utilidade dentro do projeto, elas são:
-  
- ### 📊 Gerenciamento <div id='gerenciamento'/>
+
+<div id='gerenciamento'/>
+ ### 📊 Gerenciamento 
  - Azure Devops
  - Figma
  - MS Project
  - Eclipse
  
- ### 🏗 Desenvolvimento <div id='desenvolvimento'/>
+ <div id='desenvolvimento'/>
+ ### 🏗 Desenvolvimento 
  - Spring Boot
  - React
  - PostgreSQL
  Veja mais detalhes sobre as tecnologias utilizadas...
  
- ## 💻 Protótipo <div id='prototipo'/>
+ <div id='prototipo'/>
+ ## 💻 Protótipo 
  A prototipação é essencial para a visualização do projeto antes de começar o desenvolvimento. Para 
  visualizar a prototipação dessa aplicação e navegar entre as telas acesse o link.
  Veja mais detalhes sobre as telas prototipadas...
  
- ## 🎲 Banco de Dados <div id='banco'/>
+ <div id='banco'/>
+ ## 🎲 Banco de Dados 
  O banco de dados é uma parte essencial de uma aplicação. Ele é o responsável por armazenar os dados que 
  poderão ser transformados em informações importantes para o usuário.
  Veja mais detalhes sobre o banco de dados do projeto...
   
-  
- ## 👨‍👩‍👧‍👦 Equipe de Desevolvimento <div id='equipe'/> 
+ <div id='equipe'/> 
+ ## 👨‍👩‍👧‍👦 Equipe de Desevolvimento  
  
 <table>
   <tbody>
@@ -170,7 +174,8 @@ Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre 
   </tbody>
 </table>
 
-## 👨🏻‍🏫 Professores Orientadores <div id='professores'/> 
+<div id='professores'/>
+## 👨🏻‍🏫 Professores Orientadores  
 * Eduardo Sakaue
 * José Walmir Gonçalves Duque		
 * Emanuel Mineda Carneiro		
