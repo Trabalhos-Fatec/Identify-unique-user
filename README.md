@@ -1,8 +1,5 @@
 # API - Aprendizem por Projetos Integrados 2021-02
-Projeto desenvolvido para a empresa UOL como Projeto Integrador do 6º semestre de ADS
 
-
-*******
 ## Índice
 
 * [Proposta](#proposta)
