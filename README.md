@@ -72,13 +72,6 @@ Exemplo de sumario
 <table>
  <tbody>
      <tr>
-<!--MARIANA ARAÚJO-->      <td align="center">
-        <a href="https://github.com/Marianaaraujo17">
-          <img src="https://avatars.githubusercontent.com/u/51232766?s=460&v=4" width="100px;" alt="Foto da Mariana Araújo no Github" style="max-width:100%;"></a><br><br>
-       <b>Mariana Araújo</b><br>
-        <a href="https://github.com/Marianaaraujo17"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
-       <a href="https://www.linkedin.com/in/mariana-dos-santos-araujo-210326190"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
-     </td>
 <!--JOÃO PEDRO-->      <td align="center">
         <a href="https://github.com/jpesilva">
           <img src="https://avatars.githubusercontent.com/u/50988419?v=4" width="100px;" alt="Foto da Mariana Araújo no Github" style="max-width:100%;"></a><br><br>
@@ -98,6 +91,13 @@ Exemplo de sumario
        <b>João Pedro</b><br>
         <a href="https://github.com/MarcospsDonizete"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
        <a href="https://www.linkedin.com/in/marcos-paulo-sim%C3%B5es-donizete-7b70aa132/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
+     </td>
+<!--MARIANA ARAÚJO-->      <td align="center">
+        <a href="https://github.com/Marianaaraujo17">
+          <img src="https://avatars.githubusercontent.com/u/51232766?s=460&v=4" width="100px;" alt="Foto da Mariana Araújo no Github" style="max-width:100%;"></a><br><br>
+       <b>Mariana Araújo</b><br>
+        <a href="https://github.com/Marianaaraujo17"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+       <a href="https://www.linkedin.com/in/mariana-dos-santos-araujo-210326190"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
      </td>
    </tr>
   </tbody>
