@@ -1,6 +1,6 @@
 # 🧭 CANVAS
 
-   🖼 [Visualizar Canvas do projeto](#figura)
+   🖼 ```Visualizar Canvas do projeto``` <a href="#figura">Clique aqui ⬇</a>
 
 --------------------------------------
 
