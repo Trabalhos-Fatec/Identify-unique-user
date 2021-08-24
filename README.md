@@ -163,6 +163,7 @@
           <img src="https://avatars.githubusercontent.com/u/51928650?v=4" width="100px;" alt="Foto da Mariana Araújo no Github" style="max-width:100%;"></a><br><br>
        <b>Luara Goulart</b><br>
         <a href="https://github.com/LuaraGoulart"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+      <a href="https://www.linkedin.com/in/luaraclgoulart/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
      </td>
 <!--MARCOS PAULO-->      <td align="center">
         <a href="https://github.com/MarcospsDonizete">
