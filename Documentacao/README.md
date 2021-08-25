@@ -1,4 +1,4 @@
 # Documentações aqui
 
-````Acessar Canvas````
+````Canvas````
 <a href="https://github.com/Trabalhos-Fatec/API/blob/main/Documentacao/Canvas.md">link ↗</a>
