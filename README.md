@@ -79,17 +79,18 @@
  
  ### 📊 Gerenciamento 
 
+
  <img src="https://media-exp1.licdn.com/dms/image/C560BAQGDq_jNWJhTjQ/company-logo_200_200/0/1566324987720?e=2159024400&v=beta&t=LbqW8QVdQChA_BG2DEPJDkjWBNnkwnBNuMiraBdO_ng" width="20px" title="Azure DevOps - logo"> [Azure DevOps](https://azure.microsoft.com/pt-br/services/devops/): Plataforma utilizada para o gerenciamento, planejamento, colaboração e visualização de entregas do projeto.
  
  <img title="Google Drive" width="20" src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png"> [Google Drive](https://www.google.com/intl/pt-br/drive/about.html): é um serviço de armazenamento e sincronização de arquivos.
 
  <img title="Figma" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg"> [Figma](https://www.figma.com/): Framework utilizado para a prototipação do projeto, permitindo o cliente ter uma melhor visualização do produto final, com modelos interativos e normalmente com o visual próximo ao do produto final.
  
- <img title="MS Project" width="25" src="https://upload.wikimedia.org/wikipedia/commons/1/10/MS_Project_Logo.png">[Microsoft Project](https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software): Ou MS Project é um software de gerenciamento de projetos que atua em diferentes etapas da gestão. Ele é uma ferramenta de apoio com um grande número de recursos para gerenciar um projeto do início ao fim.
+ <img title="MS Project" width="25" src="https://upload.wikimedia.org/wikipedia/commons/1/10/MS_Project_Logo.png"> [Microsoft Project](https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software): Ou MS Project é um software de gerenciamento de projetos que atua em diferentes etapas da gestão. Ele é uma ferramenta de apoio com um grande número de recursos para gerenciar um projeto do início ao fim.
  
  <img title="Eclipse" width="20" src="https://img.utdstc.com/icon/3c7/fcf/3c7fcf4930fa9402c22cee35e03fe9fcf9e8e47c9381d6b9e6922d71ee2e067a:200"> [Eclipse](https://www.eclipse.org/): <abbr title='IDE, do inglês Integrated Development Environment ou Ambiente de Desenvolvimento Integrado, é um programa de computador que reúne características e ferramentas de apoio ao desenvolvimento de software com o objetivo de agilizar este processo.'>IDE</abbr> para desenvolvimento Java.
 
- <img title="STS" width="20" src="https://spring.io/tools">[Spring Tools Suite](): é uma <abbr title='IDE, do inglês Integrated Development Environment ou Ambiente de Desenvolvimento Integrado, é um programa de computador que reúne características e ferramentas de apoio ao desenvolvimento de software com o objetivo de agilizar este processo.'>IDE</abbr> baseada em <abbr title='IDE para desenvolvimento Java'>Eclipse</abbr> que dá algumas facilidades para trabalhos com o <abbr title='O Spring é um framework Java criado com o objetivo de facilitar o desenvolvimento de aplicações, explorando, para isso, os conceitos de Inversão de Controle e Injeção de Dependências.'>Spring</abbr> no geral.
+ <img title="STS" width="20" src="https://spring.io/images/logo-spring-tools-gear-3dbfa4e3714afa9d58885422ec7ac8e5.svg"> [Spring Tools Suite](https://spring.io/tools): é uma <abbr title='IDE, do inglês Integrated Development Environment ou Ambiente de Desenvolvimento Integrado, é um programa de computador que reúne características e ferramentas de apoio ao desenvolvimento de software com o objetivo de agilizar este processo.'>IDE</abbr> baseada em <abbr title='IDE para desenvolvimento Java'>Eclipse</abbr> que dá algumas facilidades para trabalhos com o <abbr title='O Spring é um framework Java criado com o objetivo de facilitar o desenvolvimento de aplicações, explorando, para isso, os conceitos de Inversão de Controle e Injeção de Dependências.'>Spring</abbr> no geral.
 
  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="20px" title="Visual Studio Code - logo"> [Visual Studio Code](https://code.visualstudio.com/): Plataforma utilizada para a interface de desenvolvimento (<abbr title='IDE, do inglês Integrated Development Environment ou Ambiente de Desenvolvimento Integrado, é um programa de computador que reúne características e ferramentas de apoio ao desenvolvimento de software com o objetivo de agilizar este processo.'>IDE</abbr>) do projeto. Neste projeto, a ferramente será utilizada para a construção do Produto Mínimo Viável (MVP) da aplicação e do projeto completo.
  
@@ -97,15 +98,16 @@
  
  ### 🏗 Desenvolvimento 
   
- <img title="Java" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">[ Java](https://www.java.com/pt-BR/):  linguagem de programação orientada a objetos.
+  
+ <img title="Java" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"> [Java](https://www.java.com/pt-BR/):  linguagem de programação orientada a objetos.
  
- <img title="Spring Boot" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">[ Spring Boot](https://spring.io/projects/spring-boot): framework Java open source que tem como objetivo facilitar esse processo de configurações iniciais em aplicações Java.
+ <img title="Spring Boot" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"> [Spring Boot](https://spring.io/projects/spring-boot): framework Java open source que tem como objetivo facilitar esse processo de configurações iniciais em aplicações Java.
 
-<img title="JavaScript" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">[ JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript):  linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.
+<img title="JavaScript" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"> [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript):  linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.
 
-<img title="React" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">[ React](https://pt-br.reactjs.org/): é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+<img title="React" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"> [React](https://pt-br.reactjs.org/): é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
 
- <img title=" PostgreSQL" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">[ PostgreSQL](https://www.postgresql.org/): sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.
+ <img title=" PostgreSQL" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"> [PostgreSQL](https://www.postgresql.org/): sistema gerenciador de banco de dados objeto relacional, desenvolvido como projeto de código aberto.
 
  Veja mais detalhes sobre as tecnologias utilizadas...
  
