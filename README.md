@@ -160,6 +160,7 @@ Veja mais detalhes sobre as telas prototipadas...
           <img src="https://avatars.githubusercontent.com/u/5041033?v=4" width="100px;" alt="Foto do Davi Ramos no Github" style="max-width:100%;"></a><br><br>
        <b>Davi Ramos</b><br>
         <a href="https://github.com/DaviRamosAndrade"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/github-logo.png" width="27px"></a>
+     <a href="https://www.linkedin.com/in/daviramosandrade/"><img src="https://github.com/Trabalhos-Fatec/consentimento-de-dados/blob/main/Documentação%20Aplicação/Imagens/linkedin-logo.png" width="27px"></a>
      </td>
 <!--JENNIFER DOMINIQUE-->      <td align="center">
         <a href="https://github.com/JenniferDominique">
