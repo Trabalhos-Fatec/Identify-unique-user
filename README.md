@@ -66,7 +66,8 @@
  <div id='sprint'/>
  
  ## 📚 Planejamento de Desenvolvimento - Sprints 
- 🚧Em planejamento... 
+ 
+ ![Planner Sprints](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Imagens%20Repositorio/Planejamento%20Sprints.svg)
  
  <div id='tecnologias'/>
  
