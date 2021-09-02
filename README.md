@@ -118,7 +118,7 @@
  A prototipação é essencial para a visualização do projeto antes de começar o desenvolvimento. Para 
  visualizar a prototipação dessa aplicação e navegar entre as telas acesse o link.
 
-Veja mais detalhes sobre as telas prototipadas...
+[Veja mais](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Prototipo.md) detalhes sobre as telas prototipadas...
  
  <div id='banco'/>
  
