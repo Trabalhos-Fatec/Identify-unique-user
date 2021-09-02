@@ -15,15 +15,15 @@ Para navegar entre as telas prototipadas por esse projeto acesse pelo seguinte [
 ## [Tela de Login]()
 A tela de login é a primeira tela da aplicação que o usuário irá visualizar. Ela contém campos de input de informações do e-mail e senha para que dessa forma o usuário consiga se logar no sistema. Porém, caso o usuário ainda não possua um cadastro na plataforma, então ele poderá realizar o cadastramento clicando no link.
 
-<center>
+<p align="center">
 <img src='https://raw.githubusercontent.com/Trabalhos-Fatec/Identify-unique-user/main/Imagens%20Repositorio/Prototipo/tela_login.png' width="500" title="Protótipo - Tela de Login">
-</center>
+</p>
 
 <div id='cadastro'/>
 
 ## [Tela de Cadastro]()
 Caso o usuário não ainda não possua cadastro na plataforma então na tela de cadastro o usuário poderá informar seus dados e se cadastrar na plataforma para que ele possa ter acesso a mesma posteriormente.
 
-<center>
+<p align="center">
 <img src='https://raw.githubusercontent.com/Trabalhos-Fatec/Identify-unique-user/main/Imagens%20Repositorio/Prototipo/tela_cadastro.png' width="500" title="Protótipo - Tela de Cadastro">
-</center>
+</p>
