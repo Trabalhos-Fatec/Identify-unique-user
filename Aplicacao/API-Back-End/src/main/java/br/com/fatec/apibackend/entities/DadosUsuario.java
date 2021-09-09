@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonView;
+import br.com.fatec.apibackend.views.ViewUsuario;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,9 +32,11 @@ public class DadosUsuario {
   @JoinColumn(name = "usuario_id")
   private Usuario usuario;
 
+  @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "dadosUsuario")
   private List<Email> email;
 
+  @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "dadosUsuario")
   private List<Telefone> telefone;
 

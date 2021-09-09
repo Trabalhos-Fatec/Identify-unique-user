@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import com.fasterxml.jackson.annotation.JsonView;
+import br.com.fatec.apibackend.views.ViewUsuario;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,7 +25,7 @@ public class Autorizacao {
   @Column(name = "auth_id")
   private Long id;
 
-  @NotNull
+  @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
   @Column(name = "auth_nome")
   private String nome;
 

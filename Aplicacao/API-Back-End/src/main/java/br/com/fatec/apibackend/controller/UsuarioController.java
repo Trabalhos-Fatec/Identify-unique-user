@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import com.fasterxml.jackson.annotation.JsonView;
 import br.com.fatec.apibackend.entities.Usuario;
 import br.com.fatec.apibackend.services.UserService;
+import br.com.fatec.apibackend.views.ViewUsuario;
 
 @RestController
 @CrossOrigin
@@ -23,21 +25,25 @@ public class UsuarioController {
   public UserService userServ;
 
   @PostMapping()
+  @JsonView(ViewUsuario.UsuarioView.class)
   public ResponseEntity<Usuario> cadastrarUser(@RequestBody Usuario usuario) {
     return ResponseEntity.ok(userServ.cadastroUsuario(usuario));
   }
 
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
   @PutMapping()
   public ResponseEntity<Usuario> editarUser(@RequestBody Usuario usuario) {
     return ResponseEntity.ok(userServ.editarUsuario(usuario));
   }
 
+  @JsonView(ViewUsuario.UsuarioView.class)
   @DeleteMapping()
   public ResponseEntity<Usuario> deletaUser(@RequestBody Usuario usuario) {
     userServ.deleteUsuario(usuario);
     return ResponseEntity.ok().build();
   }
 
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
   @GetMapping()
   public ResponseEntity<List<Usuario>> getLista() {
     return ResponseEntity.ok().body(userServ.listaUsuarios());
