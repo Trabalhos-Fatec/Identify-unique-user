@@ -2,7 +2,6 @@ package br.com.fatec.apibackend.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,18 +16,19 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
+
+@NoArgsConstructor
 @Table(name = "email")
 public class Email {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "email_id")
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
   private Long id;
 
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "data_user_id")
+  @ManyToOne
+  @JoinColumn(name = "dados_usuario_id")
   private DadosUsuario dadosUsuario;
 
   @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})

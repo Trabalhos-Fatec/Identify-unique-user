@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,8 +25,8 @@ public class UsuarioController {
   @Autowired
   public UserService userServ;
 
-  @PostMapping()
   @JsonView(ViewUsuario.UsuarioView.class)
+  @PostMapping()
   public ResponseEntity<Usuario> cadastrarUser(@RequestBody Usuario usuario) {
     return ResponseEntity.ok(userServ.cadastroUsuario(usuario));
   }
@@ -37,13 +38,13 @@ public class UsuarioController {
   }
 
   @JsonView(ViewUsuario.UsuarioView.class)
-  @DeleteMapping()
-  public ResponseEntity<Usuario> deletaUser(@RequestBody Usuario usuario) {
-    userServ.deleteUsuario(usuario);
+  @DeleteMapping(value = "/{id}")
+  public ResponseEntity<Usuario> deletaUser(@PathVariable("id") Long id) {
+    userServ.deleteUsuario(id);
     return ResponseEntity.ok().build();
   }
 
-  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @JsonView(ViewUsuario.UsuarioView.class)
   @GetMapping()
   public ResponseEntity<List<Usuario>> getLista() {
     return ResponseEntity.ok().body(userServ.listaUsuarios());

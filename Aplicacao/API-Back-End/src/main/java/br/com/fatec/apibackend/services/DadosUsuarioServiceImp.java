@@ -26,28 +26,16 @@ public class DadosUsuarioServiceImp implements DadosUsuarioService {
 
   @Transactional
   public DadosUsuario cadastroDados(DadosUsuario dados) {
-    ArrayList<Email> listEmail = new ArrayList<Email>();
-    ArrayList<Telefone> listTelefone = new ArrayList<Telefone>();
-
+    dadosRepo.save(dados);
     for (Email email : dados.getEmail()) {
-      if (emailRepo.findByEmail(email.getEmail()) == null) {
-        listEmail.add(emailRepo.save(email));
-      } else {
-        listEmail.add(email);
-      }
+      email.setDadosUsuario(dados);
+      emailRepo.save(email);
     }
 
     for (Telefone telefone : dados.getTelefone()) {
-      if (telRepo.findByTelefone(telefone.getTelefone()) == null) {
-        telRepo.save(telefone);
-        listTelefone.add(telRepo.save(telefone));
-      } else {
-        listTelefone.add(telefone);
-      }
+      telefone.setDadosUsuario(dados);
+      telRepo.save(telefone);
     }
-    dados.setEmail(listEmail);
-    dados.setTelefone(listTelefone);
-
     return dadosRepo.save(dados);
   }
 
@@ -66,14 +54,11 @@ public class DadosUsuarioServiceImp implements DadosUsuarioService {
 
     for (Telefone telefone : dados.getTelefone()) {
       if (telRepo.findByTelefone(telefone.getTelefone()) == null) {
-        telRepo.save(telefone);
         listTelefone.add(telRepo.save(telefone));
       } else {
         listTelefone.add(telefone);
       }
     }
-    dados.setEmail(listEmail);
-    dados.setTelefone(listTelefone);
 
     return dadosRepo.save(dados);
   }

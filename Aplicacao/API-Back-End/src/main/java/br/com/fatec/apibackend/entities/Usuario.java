@@ -1,6 +1,8 @@
 package br.com.fatec.apibackend.entities;
 
+import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,20 +17,17 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonView;
 import br.com.fatec.apibackend.views.ViewUsuario;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-@NoArgsConstructor
 @Table(name = "usuario")
 public class Usuario {
 
   @Id
   @JsonView(ViewUsuario.UsuarioCompletoView.class)
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "usuario_id")
   private Long id;
 
   @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
@@ -42,14 +41,15 @@ public class Usuario {
   @Column(name = "usuario_atividade")
   private boolean atividade;
 
-  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
   @ManyToMany(fetch = FetchType.LAZY)
   @JoinTable(name = "usuario_autorizacao", joinColumns = {@JoinColumn(name = "usuario_id")},
       inverseJoinColumns = {@JoinColumn(name = "auth_id")})
-  private Set<Autorizacao> autorizacao;
+  private Set<Autorizacao> autorizacao = new HashSet<>();
 
-  @JsonView(ViewUsuario.UsuarioCompletoView.class)
-  @OneToOne(fetch = FetchType.LAZY, mappedBy = "usuario")
+  @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
+  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+  @JoinColumn(name = "dados_usuario_id")
   private DadosUsuario dados;
 
 }

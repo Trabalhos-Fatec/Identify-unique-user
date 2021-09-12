@@ -27,14 +27,14 @@ public class UserServiceImp implements UserService {
     HashSet<Autorizacao> hashAuth = new HashSet<Autorizacao>();
     for (Autorizacao auth : user.getAutorizacao()) {
       if (authRepo.findByNome(auth.getNome()) == null) {
-        authRepo.save(auth);
+        hashAuth.add(authRepo.save(auth));
       } else {
         hashAuth.add(authRepo.findByNome(auth.getNome()));
       }
     }
-    user.setAutorizacao((hashAuth));
+    user.setAutorizacao(hashAuth);
     dadosService.cadastroDados(user.getDados());
-    System.out.println(user);
+
     return userRepo.save(user);
   }
 
@@ -43,18 +43,19 @@ public class UserServiceImp implements UserService {
     HashSet<Autorizacao> hashAuth = new HashSet<Autorizacao>();
     for (Autorizacao auth : user.getAutorizacao()) {
       if (authRepo.findByNome(auth.getNome()) == null) {
-        authRepo.save(auth);
+        hashAuth.add(authRepo.save(auth));
       } else {
-        hashAuth.add(auth);
+        hashAuth.add(authRepo.findByNome(auth.getNome()));
       }
     }
-    user.setAutorizacao((hashAuth));
-    dadosService.editarDados(user.getDados());
+    user.setAutorizacao(hashAuth);
+    dadosService.cadastroDados(user.getDados());
+
     return userRepo.save(user);
   }
 
-  public void deleteUsuario(Usuario user) {
-    userRepo.delete(user);
+  public void deleteUsuario(long idUser) {
+    userRepo.deleteById(idUser);
   }
 
   public List<Usuario> listaUsuarios() {

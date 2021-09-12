@@ -9,7 +9,7 @@ public interface UserService {
 
   public Usuario editarUsuario(Usuario user);
 
-  public void deleteUsuario(Usuario user);
+  public void deleteUsuario(long idUser);
 
   public List<Usuario> listaUsuarios();
 
