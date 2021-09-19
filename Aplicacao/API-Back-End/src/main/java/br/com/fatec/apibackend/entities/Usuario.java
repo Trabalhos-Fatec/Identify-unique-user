@@ -42,7 +42,7 @@ public class Usuario {
   private String fingerprint;
 
   @JsonView(ViewUsuario.UsuarioCompletoView.class)
-  @Column(name = "usuario_components")
+  @Column(name = "usuario_components", length=10485760)
   private String components;
 
   @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
