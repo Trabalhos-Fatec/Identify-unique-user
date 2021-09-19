@@ -13,4 +13,6 @@ public interface UserService {
 
   public List<Usuario> listaUsuarios();
 
+  public Usuario doLogin(String email, String senha);
+
 }

@@ -37,6 +37,14 @@ public class Usuario {
   @Column(name = "usuario_senha")
   private String senha;
 
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @Column(name = "usuario_fingerprint")
+  private String fingerprint;
+
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @Column(name = "usuario_components")
+  private String components;
+
   @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
   @Column(name = "usuario_atividade")
   private boolean atividade;
