@@ -1,3 +1,5 @@
+<img src="https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Imagens%20Repositorio/Banner%20API%20-%20Fatec%202021.gif" size="2px">
+
 # API - Aprendizem por Projetos Integrados 2021-02
 
 ## Índice
