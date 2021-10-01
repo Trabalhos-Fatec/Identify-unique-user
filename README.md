@@ -49,11 +49,8 @@
  <div id='definicao'/>
  
  ### ⚠ Definição do Problema 
- Vem aumentando constantemente o números de <abbr title='Pessoas que enviam conteúdo de spam.'>spammers</abbr>, que são as pessoas responsáveis pelo envio de mensagens não 
- solicitadas, em sua maioria publicitária, enviadas em massa, que nos mais conhecemos como mensagens de <abbr title='Do termo “Sending and Posting Advertisement in Mass” (tráfego de publicidade em massa) ou “Stupid 
- Pointless Annoying Messages” (mensagem de propósito irritante).'>spam</abbr>
- de e-mail, porém alguns desses e-mails podem conter
- links e arquivos em anexo com códigos malíciosos.
+ Vem aumentando constantemente o números de spammers (pessoas que enviam conteúdo de spam), que são as pessoas responsáveis pelo envio de mensagens não 
+ solicitadas, em sua maioria publicitária, enviadas em massa, que nós mais conhecemos como mensagens de spam , do termo “Sending and Posting Advertisement in Mass” (tráfego de publicidade em massa) ou “Stupid Pointless Annoying Messages” (mensagem de propósito irritante), de e-mail, porém alguns desses e-mails podem conter links e arquivos em anexo com códigos maliciosos.
  
  <div id='objetivo'/>
  
@@ -64,7 +61,7 @@
  O intuito desse projeto é desenvolver um software que seja capaz de identificar todas as
  contas que esse mesmo usuário spammer criou, para que posteriormente alguma providência seja tomada.
  
- O problema é que esses spammer maliciosos geralmente fraudam suas informações de IP do computador, celular e
+ O problema é que esses spammers maliciosos geralmente fraudam suas informações de IP do computador, celular e
  entre outras informações que são solicitadas/coletadas em seu cadastro de conta e-mail no [BOL](https://www.bol.uol.com.br/).
  
  <div id='sprint'/>
