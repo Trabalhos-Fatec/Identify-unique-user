@@ -42,7 +42,7 @@ public class Usuario {
   private String fingerprint;
 
   @JsonView(ViewUsuario.UsuarioCompletoView.class)
-  @Column(name = "usuario_components", length=10485760)
+  @Column(name = "usuario_components", length = 10485760)
   private String components;
 
   @JsonView({ViewUsuario.UsuarioView.class, ViewUsuario.UsuarioCompletoView.class})
@@ -60,4 +60,22 @@ public class Usuario {
   @JoinColumn(name = "dados_usuario_id")
   private DadosUsuario dados;
 
+  public String getEmail(int i) {
+    return this.dados.getEmail().get(i).getEmail();
+  }
+
+  public String getTelefone(int i) {
+    return this.dados.getTelefone().get(i).getTelefone();
+  }
+
+  public String getAutorizacaos() {
+    String aux = "";
+    for (Autorizacao aut : this.autorizacao) {
+      aux = aut.getNome() + ",";
+    }
+    aux = aux.substring(0, aux.length() - 1);
+
+    return aux;
+
+  }
 }

@@ -6,6 +6,7 @@ import Logon from './pages/Logon';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Sucesso from './pages/Sucesso';
+import User from "./pages/Users"
 
 import { isAuthenticated } from "./services/auth";
 
@@ -29,6 +30,7 @@ const Routes = () => (
             <Route path="/register" component={ Register }/>
             <Route path="/profile" component={ Profile } />
             <Route path="/sucesso" component={ Sucesso } />
+            <Route path="/users" component={ User } />
             <Route path="*" component={() => <h1>Page not found</h1>} />
         </Switch>
     </BrowserRouter>

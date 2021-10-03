@@ -24,16 +24,16 @@ export default function SignIn(event) {
 
     const login = {
       "email":email,
-      "senha":password
+      "password":password,
     };
 
     axios({
-      timeout: 500,
       method: 'post',
-      url: 'http://localhost:8080/usuario/login/',
+      url: 'http://localhost:8080/login/',
       data: login
     }).then(function (response){
       if(response.data){
+        localStorage.setItem('token', response.data.token);
         history.push("/profile");
       } else {
         toast.current.show({severity: 'error', summary: 'Erro!', detail: 'E-mail ou senha incorretos'});

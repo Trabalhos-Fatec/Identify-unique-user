@@ -1,28 +1,24 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { InputMask } from "primereact/inputmask";
 import { Toast } from "primereact/toast"
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
-import axios from 'axios'
-import api from "../../services/api";
+import axios from "axios"
 
 // Styles
 import "./styles.css";
-import { func } from "prop-types";
 
 export default function Resgister() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState();
+  const [telefone, setPhone] = useState();
   const [fingerprint, setFingerprint] = useState("");
   const [components, setComponents] = useState("");
-
-  const toast = useRef();
-
   const history = useHistory();
+  const toast = useRef();
 
   useEffect(() => {
     const fpPromise = FingerprintJS.load()
@@ -47,13 +43,11 @@ export default function Resgister() {
       "components": components,
       "autorizacao": [{ "nome": "ROLE_USER" }],
       "dados": {
-        "telefone": [{ phone }],
+        "telefone": [{ telefone }],
         "email": [{ email }],
       }
-    };
-    console.log(data)
+    }
     axios({
-      timeout: 500,
       method: 'post',
       url: 'http://localhost:8080/usuario/',
       data: data
@@ -61,7 +55,7 @@ export default function Resgister() {
       .then(function (response) {
         history.push("/")
       }).catch((error) => {
-        toast.current.show({severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor'});
+        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
       })
     //  history.push("/");
 
@@ -131,10 +125,10 @@ export default function Resgister() {
                     mask="(99) 9999-9999?9"
                     className="w-full mb-3"
                     required
-                    value={phone}
+                    value={telefone}
                     maxlength="12"
                     placeholder="(99) 99999-9999"
-                    onChange={(e) => setPhone(e.value)}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
                 <div className="">

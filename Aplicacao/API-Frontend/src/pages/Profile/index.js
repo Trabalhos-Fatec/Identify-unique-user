@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory, generatePath } from "react-router-dom";
-import { InputText } from "primereact/inputtext";
+import React from "react";
+import {  useHistory } from "react-router-dom";
 import { Button } from "primereact/button";
 
 // import api from '../../services/api';
@@ -32,7 +31,7 @@ export default function Profile() {
     history.push("/");
   }
 
-  return (
+    return (
     <div className="">
       <header
         style={{
@@ -46,6 +45,9 @@ export default function Profile() {
           <div className="flex-none flex align-items-center justify-content-center">
             <Button className="ml-3" onClick={handleLogout}>
               Sair
+            </Button>
+            <Button className="ml-3" onClick={()=>{history.push("/users");}}>
+              Usuários
             </Button>
           </div>
           <></>

@@ -1,9 +1,10 @@
 package br.com.fatec.apibackend.services;
 
 import java.util.List;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import br.com.fatec.apibackend.entities.Usuario;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
 
   public Usuario cadastroUsuario(Usuario user);
 
@@ -12,7 +13,5 @@ public interface UserService {
   public void deleteUsuario(long idUser);
 
   public List<Usuario> listaUsuarios();
-
-  public Usuario doLogin(String email, String senha);
 
 }

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.annotation.JsonView;
-import br.com.fatec.apibackend.entities.Login;
 import br.com.fatec.apibackend.entities.Usuario;
 import br.com.fatec.apibackend.services.UserService;
 import br.com.fatec.apibackend.views.ViewUsuario;
@@ -49,13 +48,6 @@ public class UsuarioController {
   @GetMapping()
   public ResponseEntity<List<Usuario>> getLista() {
     return ResponseEntity.ok().body(userServ.listaUsuarios());
-  }
-
-  @JsonView(ViewUsuario.UsuarioCompletoView.class)
-  @PostMapping(value = "/login")
-  public ResponseEntity<Usuario> doLogin(@RequestBody Login login) {
-    return ResponseEntity.ok().body(userServ.doLogin(login.getEmail(), login.getSenha()));
-
   }
 
 }
