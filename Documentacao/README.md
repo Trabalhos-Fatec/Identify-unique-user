@@ -1,11 +1,16 @@
-# Documentações aqui
+# 📂 Documentações 
 
-[````Canvas```` 🔗](https://github.com/Trabalhos-Fatec/API/blob/main/Documentacao/Canvas.md)</br>
+Segue a baixo as documentações referentes ao projeto desenvolvido e apresentado nesse repositório:
 
-[````Protótipo```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Prototipo.md)</br>
+[````📊 Canvas```` 🔗](https://github.com/Trabalhos-Fatec/API/blob/main/Documentacao/Canvas.md)</br>
 
-[````TAP - Termo de Abertura do Projeto```` 🔗](https://docs.google.com/document/d/1NU8ybNxAGj-yqcrETc5Gt1kGClIWZipi/edit?usp=sharing&ouid=105388091416881374278&rtpof=true&sd=true)</br>
+[````💻 Protótipo```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Prototipo.md)</br>
 
-[````Declaração de Escopo```` 🔗]()</br>
+[````📄 TAP - Termo de Abertura do Projeto```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/TAP-Termo_de_Abertura_do_Projeto.pdf)</br>
 
+[````📄 Declaração de Escopo```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Declaracao_do_Escopo.pdf)</br>
+
+[````📄 Gerenciamento do Cronograma```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Gerenciamento_do_Cronograma.pdf)</br>
+
+[````📄 Gerenciamento de Custos```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Gerenciamento_dos_Custos.pdf)</br>
 
