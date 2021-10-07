@@ -15,6 +15,7 @@ export default function Resgister() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [telefone, setPhone] = useState();
+  const [IP, setIP] = useState();
   const [fingerprint, setFingerprint] = useState("");
   const [components, setComponents] = useState("");
   const history = useHistory();
@@ -29,6 +30,9 @@ export default function Resgister() {
 
         setFingerprint(result.visitorId)
         setComponents(JSON.stringify(result))
+
+        const res = await axios.get('https://geolocation-db.com/json/')
+        setIP(res.data.IPv4)
       })()
 
   }, []);
@@ -67,8 +71,36 @@ export default function Resgister() {
     // }
   }
 
+  function teste() {
+    axios({
+      method: 'get',
+      url: 'http://localhost:8080/tracerouter/chaining',
+      "templated": false
+    })
+      .then((response) => {
+        console.log(response)
+      }).catch((error) => {
+        console.log(error)
+        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
+      })
+  }
+
+  function teste2() {
+    axios({
+      method: 'get',
+      url: `http://localhost:8080/tracerouter/tracerouter/${IP}`
+    })
+      .then((response) => {
+        console.log(response)
+      }).catch((error) => {
+        console.log(error)
+        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
+      })
+  }
   return (
     <div className="logon-container">
+      <button onClick={teste}>teste</button>
+      <button onClick={teste2}>teste</button>
       <div className="surface-card p-5 shadow-6 border-round">
         <section className="my-4">
           <h1 className="no-underline text-blue-500">Cadastro de usuário</h1>
