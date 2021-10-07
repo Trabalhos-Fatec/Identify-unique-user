@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import axios from "axios"
 import { useHistory } from "react-router-dom";
 import { InputText } from "primereact/inputtext";
 import { DataTable } from 'primereact/datatable';
@@ -10,6 +9,10 @@ import { Toast } from 'primereact/toast';
 import { useForm } from "react-hook-form";
 import { SplitButton } from 'primereact/splitbutton'
 import { confirmDialog } from 'primereact/confirmdialog';
+import { Card } from 'primereact/card';
+
+import api from '../../services/api';
+import { isAuthenticated, getToken, logout } from "../../services/auth";
 
 export default function SignIn(event) {
   const [listUser, setListUser] = useState();
@@ -23,8 +26,7 @@ export default function SignIn(event) {
   }
 
   function handleLogout() {
-    localStorage.clear();
-    history.push("/");
+    history.push("/profile");
   }
 
   function onSubmit(json) {
@@ -32,25 +34,27 @@ export default function SignIn(event) {
   }
 
   function editSave(json) {
-    axios({
-      method: 'put',
-      url: `http://localhost:8080/usuario/`,
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-      data: json
-    })
-      .then(response => {
-        loadUserList()
-        toast.current.show({ severity: 'success', summary: 'Editado com Sucesso', life: 3000 });
+    if (isAuthenticated) {
+      api({
+        method: 'put',
+        url: `/usuario/`,
+        headers: {
+          Authorization: 'Bearer' + getToken,
+        },
+        data: json
       })
-      .catch((error) => {
-        console.log((error))
-        toast.current.show({ severity: 'error', summary: 'Erro ao editar', life: 3000 });
-      })
-      .finally(() => {
-        onHide('displayEdit')
-      })
+        .then(response => {
+          loadUserList()
+          toast.current.show({ severity: 'success', summary: 'Editado com Sucesso', life: 3000 });
+        })
+        .catch((error) => {
+          console.log((error))
+          toast.current.show({ severity: 'error', summary: 'Erro ao editar', life: 3000 });
+        })
+        .finally(() => {
+          onHide('displayEdit')
+        })
+    }
   }
 
   function confirm(userData) {
@@ -68,42 +72,46 @@ export default function SignIn(event) {
   };
 
   function deleteUser(id) {
-    axios({
-      method: 'delete',
-      url: `http://localhost:8080/usuario/${id}`,
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      }
-    })
-      .then(response => {
-        loadUserList()
-        toast.current.show({ severity: 'success', summary: 'Deletado com Sucesso', life: 3000 });
+    if (isAuthenticated) {
+      api({
+        method: 'delete',
+        url: `/usuario/${id}`,
+        headers: {
+          Authorization: 'Bearer' + getToken,
+        }
       })
-      .catch((error) => {
-        if(error.response.data.status == 403)
-        toast.current.show({ severity: 'error', summary: 'Sem autorização para isso', life: 3000 });
-        toast.current.show({ severity: 'error', summary: 'Erro ao deletar', life: 3000 });
-      })
-      .finally(() => {
-        onHide('displayEdit')
-      })
+        .then(response => {
+          loadUserList()
+          toast.current.show({ severity: 'success', summary: 'Deletado com Sucesso', life: 3000 });
+        })
+        .catch((error) => {
+          if (error.response.data.status === 403)
+            toast.current.show({ severity: 'error', summary: 'Sem autorização para isso', life: 3000 });
+          toast.current.show({ severity: 'error', summary: 'Erro ao deletar', life: 3000 });
+        })
+        .finally(() => {
+          onHide('displayEdit')
+        })
+    }
   }
 
   function loadUserList() {
-    axios({
-      method: 'get',
-      url: 'http://localhost:8080/usuario/',
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      }
-    })
-      .then(response => {
-        setListUser(response.data);
+    if (isAuthenticated) {
+      api({
+        method: 'get',
+        url: '/usuario/',
+        headers: {
+          Authorization: 'Bearer' + getToken,
+        }
       })
-      .catch((error) => {
-        console.log((error))
-        toast.current.show({ severity: 'error', summary: 'Erro ao listar usuários', life: 3000 });
-      })
+        .then(response => {
+          setListUser(response.data);
+        })
+        .catch((error) => {
+          console.log((error))
+          toast.current.show({ severity: 'error', summary: 'Erro ao listar usuários', life: 3000 });
+        })
+    }
   }
 
   function getProp(data, props) {
@@ -163,7 +171,7 @@ export default function SignIn(event) {
         <div className="flex">
           <div className="flex-none flex align-items-center justify-content-center">
             <Button className="ml-3" onClick={handleLogout}>
-              Sair
+              Voltar
             </Button>
           </div>
           <></>
@@ -172,46 +180,52 @@ export default function SignIn(event) {
           </div>
         </div>
       </header>
+      <div class="flex flex-wrap align-items-center justify-content-center card-container yellow-container">
+        <div className="col-8">
+          <Card>
 
-      <div>
-        <Button label="Mosta lista de usuários" className="ml-3" onClick={loadUserList} />
-        <Button label="Limpar lista de usuários" className="ml-3" onClick={() => setListUser()} />
-      </div>
-      <div>
-        {listUser &&
-          <div className="card">
-            <DataTable value={listUser}>
-              <Column field="id" header="ID"></Column>
-              <Column field="nome" header="Nome"></Column>
-              <Column body={(rowData) => getProp(rowData.dados, "email")} header="Email"></Column>
-              <Column body={(rowData) => getProp(rowData.dados, "telefone")} header="Telefone"></Column>
-              <Column body={actionTemplate} style={{ width: '150px' }} header="Ações"></Column>
-            </DataTable>
-          </div>
-        }
-      </div>
-
-      <Dialog visible={displayEdit} header={`${modalHeader} Usuário`} style={{ width: '40vw' }} footer={renderFooter('displayEdit')} onHide={() => onHide('displayEdit')}>
-        <div className="row">
-          <div className="col offset-s3 s6">
-
-            <div className="row">
-              <p htmlFor="Nome">Nome</p>
-              <InputText  {...register(`nome`)} type="text" />
+            <div>
+              <Button label="Mosta lista de usuários" className="ml-3" onClick={loadUserList} />
+              <Button label="Limpar lista de usuários" className="ml-3" onClick={() => setListUser()} />
+            </div>
+            <div>
+              {listUser &&
+                <div className="card">
+                  <DataTable value={listUser}>
+                    <Column field="id" header="ID"></Column>
+                    <Column field="nome" header="Nome"></Column>
+                    <Column body={(rowData) => getProp(rowData.dados, "email")} header="Email"></Column>
+                    <Column body={(rowData) => getProp(rowData.dados, "telefone")} header="Telefone"></Column>
+                    <Column body={actionTemplate} style={{ width: '150px' }} header="Ações"></Column>
+                  </DataTable>
+                </div>
+              }
             </div>
 
-            <div className="row">
-              <p htmlFor="Email">E-mail</p>
-              <InputText {...register(`dados.email.0.email`)} type="text" />
-            </div>
-            <div className="row">
-              <p htmlFor="Email">Telefone</p>
-              <InputText {...register(`dados.telefone.0.telefone`)} type="text" />
-            </div>
+            <Dialog visible={displayEdit} header={`${modalHeader} Usuário`} style={{ width: '40vw' }} footer={renderFooter('displayEdit')} onHide={() => onHide('displayEdit')}>
+              <div className="row">
+                <div className="col offset-s3 s6">
 
-          </div>
+                  <div className="row">
+                    <p htmlFor="Nome">Nome</p>
+                    <InputText  {...register(`nome`)} type="text" />
+                  </div>
+
+                  <div className="row">
+                    <p htmlFor="Email">E-mail</p>
+                    <InputText {...register(`dados.email.0.email`)} type="text" />
+                  </div>
+                  <div className="row">
+                    <p htmlFor="Telefone">Telefone</p>
+                    <InputText {...register(`dados.telefone.0.telefone`)} type="text" />
+                  </div>
+
+                </div>
+              </div>
+            </Dialog>
+          </Card>
         </div>
-      </Dialog>
+      </div>
     </div>
   );
 }

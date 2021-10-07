@@ -5,7 +5,7 @@ import { Button } from "primereact/button";
 import { InputMask } from "primereact/inputmask";
 import { Toast } from "primereact/toast"
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
-import axios from "axios"
+import api from '../../services/api';
 
 // Styles
 import "./styles.css";
@@ -22,9 +22,8 @@ export default function Resgister() {
   const toast = useRef();
 
   useEffect(() => {
-    const fpPromise = FingerprintJS.load()
-
-      ; (async () => {
+    const fpPromise = FingerprintJS.load();
+    (async () => {
         const fp = await fpPromise
         const result = await fp.get()
 
@@ -51,24 +50,18 @@ export default function Resgister() {
         "email": [{ email }],
       }
     }
-    axios({
+
+    api({
       method: 'post',
-      url: 'http://localhost:8080/usuario/',
+      url: '/usuario/',
       data: data
     })
       .then(function (response) {
+        toast.current.show({ severity: 'success', summary: 'Sucesso', life: 3000 });
         history.push("/")
       }).catch((error) => {
         toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
       })
-    //  history.push("/");
-
-    // try {
-    //   await api.post("/register", data);
-
-    // } catch (err) {
-    //   alert("Erro ao cadastrar, tente novamente.", err);
-    // }
   }
 
   function teste() {
