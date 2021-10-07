@@ -5,34 +5,30 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Logon from "./pages/Logon";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-import Sucesso from "./pages/Sucesso";
 import User from "./pages/Users";
-import Modal from "./pages/Modal";
 
 import { isAuthenticated } from "./services/auth";
 
-// const PrivateRoute = ({ component: Component, ...rest }) => (
-//     <Route
-//       {...rest}
-//       render={props =>
-//         isAuthenticated() ? (
-//           <Component {...props} />
-//         ) : (
-//           <Redirect to={{ pathname: "/", state: { from: props.location } }} />
-//         )
-//       }
-//     />
-// );
+const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props =>
+        isAuthenticated() ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+        )
+      }
+    />
+);
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Logon} />
       <Route path="/register" component={Register} />
-      <Route path="/profile" component={Profile} />
-      <Route path="/sucesso" component={Sucesso} />
-      <Route path="/users" component={User} />
-      <Route path="/modal" component={Modal} />
+      <PrivateRoute path="/profile" component={Profile} />
+      <PrivateRoute path="/users" component={User} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
   </BrowserRouter>
