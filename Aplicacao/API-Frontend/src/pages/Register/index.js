@@ -21,6 +21,19 @@ export default function Resgister() {
   const history = useHistory();
   const toast = useRef();
 
+  function traceRoute() {
+    api({
+      method: 'get',
+      url: `http://localhost:8080/tracerouter/tracerouter/${IP}`
+    })
+      .then((response) => {
+        console.log(response)
+      }).catch((error) => {
+        console.log(error)
+        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Erro 002: Falha ao contatar o servidor' });
+      })
+  }
+
   useEffect(() => {
     const fpPromise = FingerprintJS.load();
     (async () => {
@@ -29,8 +42,9 @@ export default function Resgister() {
 
         setFingerprint(result.visitorId)
         setComponents(JSON.stringify(result))
+        traceRoute();
 
-        const res = await axios.get('https://geolocation-db.com/json/')
+        const res = await api.get('https://geolocation-db.com/json/')
         setIP(res.data.IPv4)
       })()
 
@@ -60,40 +74,12 @@ export default function Resgister() {
         toast.current.show({ severity: 'success', summary: 'Sucesso', life: 3000 });
         history.push("/")
       }).catch((error) => {
-        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
+        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Erro 001: Falha ao contatar o servidor' });
       })
   }
 
-  function teste() {
-    axios({
-      method: 'get',
-      url: 'http://localhost:8080/tracerouter/chaining',
-      "templated": false
-    })
-      .then((response) => {
-        console.log(response)
-      }).catch((error) => {
-        console.log(error)
-        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
-      })
-  }
-
-  function teste2() {
-    axios({
-      method: 'get',
-      url: `http://localhost:8080/tracerouter/tracerouter/${IP}`
-    })
-      .then((response) => {
-        console.log(response)
-      }).catch((error) => {
-        console.log(error)
-        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
-      })
-  }
   return (
     <div className="logon-container">
-      <button onClick={teste}>teste</button>
-      <button onClick={teste2}>teste</button>
       <div className="surface-card p-5 shadow-6 border-round">
         <section className="my-4">
           <h1 className="no-underline text-blue-500">Cadastro de usuário</h1>
