@@ -6,6 +6,8 @@ import { InputMask } from "primereact/inputmask";
 import { Toast } from "primereact/toast"
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import api from '../../services/api';
+import axios from "axios"
+
 
 // Styles
 import "./styles.css";
@@ -57,34 +59,28 @@ export default function Resgister() {
       data: data
     })
       .then(function (response) {
+        teste2(response.data)
         toast.current.show({ severity: 'success', summary: 'Sucesso', life: 3000 });
-        history.push("/")
-      }).catch((error) => {
-        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
-      })
-  }
-
-  function teste() {
-    axios({
-      method: 'get',
-      url: 'http://localhost:8080/tracerouter/chaining',
-      "templated": false
-    })
-      .then((response) => {
-        console.log(response)
+        history.push("/") 
       }).catch((error) => {
         console.log(error)
         toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });
       })
   }
 
-  function teste2() {
+  function teste() {
+    console.log(IP)
+  }
+
+  function teste2(usuario) {
+    console.log(usuario)
     axios({
-      method: 'get',
-      url: `http://localhost:8080/tracerouter/tracerouter/${IP}`
+      method: 'post',
+      url: `http://localhost:8080/tracerouter/tracerouter/${IP}`,
+      data:usuario
     })
       .then((response) => {
-        console.log(response)
+        console.log(response.data)
       }).catch((error) => {
         console.log(error)
         toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Falha ao contatar o servidor' });

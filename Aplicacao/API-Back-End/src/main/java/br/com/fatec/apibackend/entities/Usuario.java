@@ -60,6 +60,10 @@ public class Usuario {
   @JoinColumn(name = "dados_usuario_id")
   private DadosUsuario dados;
 
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @Column(name = "usuario_tracerouter")
+  private String traceRouter;
+
   public String getEmail(int i) {
     return this.dados.getEmail().get(i).getEmail();
   }
