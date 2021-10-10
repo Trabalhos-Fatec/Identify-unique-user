@@ -64,6 +64,14 @@ public class Usuario {
   @Column(name = "usuario_tracerouter")
   private String traceRouter;
 
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @Column(name = "usuario_presses", length = 10485760)
+  private String presses;
+
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @Column(name = "usuario_mouse", length = 10485760)
+  private String mouse;
+
   public String getEmail(int i) {
     return this.dados.getEmail().get(i).getEmail();
   }

@@ -78,7 +78,7 @@ export default function Resgister() {
 
   function traceRoute(usuario) {
     axios({
-      method: 'get',
+      method: 'post',
       url: `http://localhost:8080/tracerouter/tracerouter/${IP}`,
       data:usuario
     })
@@ -86,7 +86,6 @@ export default function Resgister() {
         console.log(response)
       }).catch((error) => {
         console.log(error)
-        toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'Erro 002: Falha ao contatar o servidor' });
       })
   }
   async function handleRegister(event) {
