@@ -6,6 +6,7 @@ import { InputMask } from "primereact/inputmask";
 import { Toast } from "primereact/toast"
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import api from '../../services/api';
+import axios from 'axios'
 
 // Styles
 import "./styles.css";
@@ -20,6 +21,44 @@ export default function Resgister() {
   const [components, setComponents] = useState("");
   const history = useHistory();
   const toast = useRef();
+  const tracking = useRef([]);
+  const presses = useRef([]);
+  let konamitest = [0,0,0,0,0,0,0,0,0,0]
+  const konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a']                                             
+  
+
+  useEffect(
+    () => {
+      const update = (e) => {
+        tracking.current.push({'x':e.x, 'y':e.y, 'click':false})
+      }
+      const updateClick = e => {
+        tracking.current.push({'x':e.x, 'y':e.y, 'click':true})
+      }
+      const updateKey = e => {
+        presses.current.push(e.key)
+        konamitest=[konamitest[1],konamitest[2],konamitest[3],konamitest[4],konamitest[5],konamitest[6],konamitest[7],konamitest[8],konamitest[9],e.key]
+        let isK = true
+        for(const press in konamitest){
+          if(konamitest[press]!==konami[press])
+            isK=false
+        }
+        if(isK)
+        alert('Wahoo!')
+      }
+      window.addEventListener('mousemove', update)
+      window.addEventListener('touchmove', update)
+      window.addEventListener('mousedown', updateClick)
+      window.addEventListener('keydown', updateKey)
+      return () => {
+        window.removeEventListener('mousemove', update)
+        window.removeEventListener('touchmove', update)
+        window.removeEventListener('mousedown', updateClick)
+        window.removeEventListener('keydown', updateKey)
+      }
+    },
+  )
+
 
   useEffect(() => {
     const fpPromise = FingerprintJS.load();
@@ -44,6 +83,8 @@ export default function Resgister() {
       "senha": password,
       "fingerprint": fingerprint,
       "components": components,
+      "presses": JSON.stringify(presses),
+      "mouse": JSON.stringify(tracking),
       "autorizacao": [{ "nome": "ROLE_USER" }],
       "dados": {
         "telefone": [{ telefone }],
@@ -188,5 +229,5 @@ export default function Resgister() {
         </div>
       </div>
     </div>
-  );
-}
+  )
+  }
