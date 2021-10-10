@@ -14,5 +14,5 @@ Segue a baixo as documentações referentes ao projeto desenvolvido e apresentad
 
 [````📄 Gerenciamento de Custos```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Gerenciamento_dos_Custos.pdf)</br>
 
-[````📄 Gerenciamento de Custos```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Gerenciamento%20de%20qualidade.pdf)</br>
+[````📄 Gerenciamento de Qualidade```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Gerenciamento%20de%20qualidade.pdf)</br>
 
