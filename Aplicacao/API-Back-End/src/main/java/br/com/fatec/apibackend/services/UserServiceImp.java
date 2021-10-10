@@ -53,7 +53,6 @@ public class UserServiceImp implements UserService {
   }
 
   @Transactional
-  @PreAuthorize("isAuthenticated()")
   public Usuario editarUsuario(Usuario user) {
     user.setSenha(userRepo.findByDadosEmailEmail(user.getEmail(0)).get(0).getSenha());
     HashSet<Autorizacao> hashAuth = new HashSet<Autorizacao>();
