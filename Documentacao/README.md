@@ -2,7 +2,11 @@
 
 Segue a baixo as documentações referentes ao projeto desenvolvido e apresentado nesse repositório:
 
+[````🖼 BSC```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/BSC%20-%20Balanced%20Scorecard.png)</br>
+
 [````📊 Canvas```` 🔗](https://github.com/Trabalhos-Fatec/API/blob/main/Documentacao/Canvas.md)</br>
+
+[````📄 PETI```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/PETI.pdf)</br>
 
 [````💻 Protótipo```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Prototipo.md)</br>
 
