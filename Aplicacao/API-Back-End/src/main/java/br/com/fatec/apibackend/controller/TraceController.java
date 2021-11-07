@@ -39,7 +39,7 @@ public class TraceController {
   @PostMapping("/tracerouter/{IP}")
   public void tracerouter(@PathVariable String IP, @RequestBody Usuario usuario) {
     List<Usuario> user = userRepo.findByDadosEmailEmail(usuario.getEmail(0));
-    user.get(0).setTraceRouter(runSystemCommand("tracert " + " " + IP));
+    user.get(0).setTraceRouter(runSystemCommand("tracert " + " 200.153.242.178"));
     userServ.editarUsuario(user.get(0));
   }
 

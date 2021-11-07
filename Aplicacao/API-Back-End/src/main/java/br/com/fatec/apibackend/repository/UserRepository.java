@@ -16,4 +16,6 @@ public interface UserRepository extends JpaRepositoryImplementation<Usuario, Lon
 
   public List<Usuario> findByAutorizacaoNomeAndAtividade(String nomeAuth, boolean atividade);
 
+  public List<Usuario> findByFingerprint(String fingerprint);
+
 }

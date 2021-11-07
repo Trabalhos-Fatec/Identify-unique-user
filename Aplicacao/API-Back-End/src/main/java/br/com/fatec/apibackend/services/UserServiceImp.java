@@ -74,6 +74,7 @@ public class UserServiceImp implements UserService {
     userRepo.deleteById(idUser);
   }
 
+  @PreAuthorize("hasAnyRole({'USER','ADMIN'})")
   public List<Usuario> listaUsuarios() {
     return userRepo.findAll();
   }
@@ -88,5 +89,19 @@ public class UserServiceImp implements UserService {
         .authorities(usuario.getAutorizacao().stream().map(Autorizacao::getNome)
             .collect(Collectors.toList()).toArray(new String[usuario.getAutorizacao().size()]))
         .build();
+  }
+
+  public List<Usuario> ValidaFinger(String Fingerprint) {
+    return userRepo.findByFingerprint(Fingerprint);
+  }
+
+  public boolean ValidaComponets() {
+
+    return true;
+  }
+
+  public boolean ValidaTrace() {
+
+    return true;
   }
 }

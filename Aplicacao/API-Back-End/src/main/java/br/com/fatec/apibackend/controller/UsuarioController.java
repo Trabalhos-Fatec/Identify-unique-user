@@ -50,4 +50,11 @@ public class UsuarioController {
     return ResponseEntity.ok().body(userServ.listaUsuarios());
   }
 
+  @JsonView(ViewUsuario.UsuarioCompletoView.class)
+  @GetMapping(value = "/finger/{fingerprint}")
+  public ResponseEntity<List<Usuario>> ValidFinger(
+      @PathVariable("fingerprint") String fingerprint) {
+    return ResponseEntity.ok().body(userServ.ValidaFinger(fingerprint));
+  }
+
 }

@@ -61,7 +61,7 @@ public class Usuario {
   private DadosUsuario dados;
 
   @JsonView(ViewUsuario.UsuarioCompletoView.class)
-  @Column(name = "usuario_tracerouter")
+  @Column(name = "usuario_tracerouter", length = 10485760)
   private String traceRouter;
 
   @JsonView(ViewUsuario.UsuarioCompletoView.class)

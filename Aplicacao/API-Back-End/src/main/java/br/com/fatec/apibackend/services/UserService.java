@@ -14,4 +14,5 @@ public interface UserService extends UserDetailsService {
 
   public List<Usuario> listaUsuarios();
 
+  public List<Usuario> ValidaFinger(String Finger);
 }
