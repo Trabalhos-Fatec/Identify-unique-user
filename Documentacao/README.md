@@ -10,6 +10,8 @@ Segue a baixo as documentações referentes ao projeto desenvolvido e apresentad
 
 [````📄 Controle - Cronograma & Custos```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Controle-Cronograma_%26_Custos.pdf)</br>
 
+[````📄 Data Understanding```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Data_understanding.pdf)</br>
+
 [````📄 Declaração de Escopo```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Declaracao_do_Escopo.pdf)</br>
 
 [````📄 Desing Thinking```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Desing_Thinking-UOL%20.pptx)</br>
