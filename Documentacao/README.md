@@ -4,6 +4,8 @@ Segue a baixo as documentações referentes ao projeto desenvolvido e apresentad
 
 [````🖼 BSC - Balanced Scorecard```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/BSC%20-%20Balanced%20Scorecard.png)</br>
 
+[````🖼 Business Understanding```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Business_Understanding.pdf)</br>
+
 [````📊 Canvas```` 🔗](https://github.com/Trabalhos-Fatec/API/blob/main/Documentacao/Canvas.md)</br>
 
 [````📄 Controle - Cronograma & Custos```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Controle-Cronograma_%26_Custos.pdf)</br>
