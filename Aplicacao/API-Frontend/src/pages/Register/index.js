@@ -38,11 +38,11 @@ export default function Resgister() {
         tracking.current.push({'x':e.x, 'y':e.y, 'click':true})
       }
       const updateKey = e => {
-        try{
+        if(compare.current!==undefined)
         presses.current.push({"key":e.key, "interval":new Date().getTime() - compare.current})
-        } catch {
+        else
           presses.current.push({"key":e.key, "interval":0})
-        }
+
         compare.current = new Date().getTime()
 
         konamitest=[konamitest[1],konamitest[2],konamitest[3],konamitest[4],konamitest[5],konamitest[6],konamitest[7],konamitest[8],konamitest[9],e.key]
@@ -103,7 +103,7 @@ export default function Resgister() {
       "senha": password,
       "fingerprint": fingerprint,
       "components": components,
-      "presses": JSON.stringify(presses),
+      "presses": JSON.stringify(presses.current),
       "mouse": JSON.stringify(tracking),
       "autorizacao": [{ "nome": "ROLE_USER" }],
       "dados": {
@@ -111,8 +111,7 @@ export default function Resgister() {
         "email": [{ email }],
       }
     }
-    console.log(data)
-
+    
     api({
       method: 'post',
       url: '/usuario/',
