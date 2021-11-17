@@ -25,7 +25,8 @@ export default function Resgister() {
   const tracking = useRef([]);
   const presses = useRef([]);
   let konamitest = [0,0,0,0,0,0,0,0,0,0]
-  const konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a']                                             
+  const konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a']
+  const compare = useRef()                                          
   
 
   useEffect(
@@ -37,7 +38,13 @@ export default function Resgister() {
         tracking.current.push({'x':e.x, 'y':e.y, 'click':true})
       }
       const updateKey = e => {
-        presses.current.push(e.key)
+        try{
+        presses.current.push({"key":e.key, "interval":new Date().getTime() - compare.current})
+        } catch {
+          presses.current.push({"key":e.key, "interval":0})
+        }
+        compare.current = new Date().getTime()
+
         konamitest=[konamitest[1],konamitest[2],konamitest[3],konamitest[4],konamitest[5],konamitest[6],konamitest[7],konamitest[8],konamitest[9],e.key]
         let isK = true
         for(const press in konamitest){
@@ -104,6 +111,7 @@ export default function Resgister() {
         "email": [{ email }],
       }
     }
+    console.log(data)
 
     api({
       method: 'post',
