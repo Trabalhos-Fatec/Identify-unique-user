@@ -11,9 +11,11 @@ import { ToggleButton } from 'primereact/togglebutton';
 import { confirmDialog } from 'primereact/confirmdialog';
 import { Checkbox } from "primereact/checkbox";
 import { Card } from 'primereact/card';
+import { useDispatch } from 'react-redux';
+import { logout } from "../../feature/userSlice";
 
 import api from '../../services/api';
-import { isAuthenticated, getToken, logout } from "../../services/auth";
+import { isAuthenticated, getToken, Loggedout } from "../../services/auth";
 
 
 export default function Profile() {
@@ -48,7 +50,6 @@ export default function Profile() {
           setListUser(response.data);
         })
         .catch((error) => {
-          console.log((error))
           toast.current.show({ severity: 'error', summary: 'Erro ao listar usuários', life: 3000 });
         })
     } else {
@@ -56,8 +57,14 @@ export default function Profile() {
     }
   }, [history]);
 
-  function handleLogout() {
-    logout();
+  const dispatch = useDispatch();
+  
+  function HandleLogout(e) {
+    e.preventDefault();
+
+    dispatch(logout());
+
+    Loggedout();
     history.push("/");
   }
 
@@ -126,7 +133,19 @@ export default function Profile() {
   }
 
   function loadUserList() {
-
+    api({
+      method: 'get',
+      url: '/usuario/',
+      headers: {
+        Authorization: localStorage.getItem("token"),
+      }
+    })
+      .then(response => {
+        setListUser(response.data);
+      })
+      .catch((error) => {
+        toast.current.show({ severity: 'error', summary: 'Erro ao listar usuários', life: 3000 });
+      })
   }
 
   function getProp(data, props) {
@@ -215,7 +234,7 @@ export default function Profile() {
       >
         <div className="flex">
           <div className="flex-none flex align-items-center justify-content-center">
-            <Button className="ml-3" onClick={handleLogout}>
+            <Button className="ml-3" onClick={e => HandleLogout(e)}>
               Sair
             </Button>
           </div>
@@ -263,16 +282,16 @@ export default function Profile() {
                   <div>
                     <div className="field my-4">
                       <p htmlFor="Nome">Nome</p>
-                      <InputText className="inputfield  w-full mt-2" {...register(`nome`)} type="text" disabled/>
+                      <InputText className="inputfield  w-full mt-2" {...register(`nome`)} type="text" disabled />
                     </div>
 
                     <div className="field mb-4">
                       <p htmlFor="Email">E-mail</p>
-                      <InputText className="inputfield  w-full mt-2" {...register(`dados.email.0.email`)} type="text" disabled/>
+                      <InputText className="inputfield  w-full mt-2" {...register(`dados.email.0.email`)} type="text" disabled />
                     </div>
                     <div className="field mb-4">
                       <p htmlFor="Telefone">Telefone</p>
-                      <InputText className="inputfield  w-full mt-2" {...register(`dados.telefone.0.telefone`)} type="text" disabled/>
+                      <InputText className="inputfield  w-full mt-2" {...register(`dados.telefone.0.telefone`)} type="text" disabled />
                     </div>
 
                   </div>
