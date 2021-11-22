@@ -15,7 +15,7 @@
   * [Gerenciamento](#gerenciamento)
   * [Desenvolvimento](#desenvolvimento)
 * [Protótipo](#prototipo)
-* [Banco de Dados](#banco)
+* [Documentações](#doc)
 * [Equipe de Desenvolvimento](#equipe)
 * [Professores Orientadores](#professores)
  
@@ -121,13 +121,12 @@
 
 [Veja mais](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Prototipo.md) detalhes sobre as telas prototipadas...
  
- <div id='banco'/>
+ <div id='doc'/>
  
- ## 🎲 Banco de Dados 
- O banco de dados é uma parte essencial de uma aplicação. Ele é o responsável por armazenar os dados que 
- poderão ser transformados em informações importantes para o usuário.
+ ## 📃 Documentações
+A documentação é uma parte essencial de uma aplicação. Ela é o responsável por informar e documentar sobre o produto/projeto.
 
- Veja mais detalhes sobre o banco de dados do projeto...
+ [Veja mais](https://github.com/Trabalhos-Fatec/Identify-unique-user/tree/main/Documentacao) detalhes sobre as documentações desse projeto...
   
  <div id='equipe'/> 
  
