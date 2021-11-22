@@ -82,5 +82,3 @@ reference: [npm ERR! code ERESOLVE npm ERR! ERESOLVE unable to resolve dependenc
 * FingerprintJS: [FringerprintJS](https://dev.fingerprintjs.com/docs)
 
 * Jest: [Jest](https://jestjs.io/docs/getting-started)
-
-* 
