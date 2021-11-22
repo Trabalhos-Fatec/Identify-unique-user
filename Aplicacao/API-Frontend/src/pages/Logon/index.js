@@ -28,16 +28,18 @@ export default function SignIn(event) {
       password: password,
     }))
 
-    api.get('/login', loggedIn.payload).then(function (response) {
-      if (response.data) {
-        localStorage.setItem('token', response.data.token);
-        history.push("/profile");
-      } else {
+    api.post('/login', loggedIn.payload)
+      .then(function (response) {
+        if (response.data) {
+          localStorage.setItem('token', response.data.token);
+          history.push("/profile");
+        } else {
+          toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'E-mail ou senha incorretos' });
+        }
+      })
+      .catch(function (error) {
         toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'E-mail ou senha incorretos' });
-      }
-    }).catch(function (error) {
-      toast.current.show({ severity: 'error', summary: 'Erro!', detail: 'E-mail ou senha incorretos' });
-    })
+      })
   }
 
   return (
