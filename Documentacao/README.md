@@ -28,6 +28,8 @@ Segue a baixo as documentações referentes ao projeto desenvolvido e apresentad
 
 [````📄 PETI - Planejamento Estratégico da Tecnologia da Informação```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/PETI.pdf)</br>
 
+[````🖼 Project Model Canvas```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Project%20Model%20Canvas.png)</br>
+
 [````📄 Plano de Riscos - Sprint 03```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Plano_de_Risco-Sprint_03.pdf)</br>
 
 [````💻 Protótipo```` 🔗](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Documentacao/Prototipo.md)</br>
