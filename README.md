@@ -11,6 +11,7 @@
   * [Definição do Problema](#definicao)
   * [Objetivo](#objetivo)
 * [Planejamento de Desenvolvimento - Sprints](#sprint)
+* [Modelo Analítico](#colab)
 * [Tecnologias Utilizadas](#tecnologias)
   * [Gerenciamento](#gerenciamento)
   * [Desenvolvimento](#desenvolvimento)
@@ -69,6 +70,12 @@
  ## 📚 Planejamento de Desenvolvimento - Sprints 
  
  ![Planner Sprints](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Imagens%20Repositorio/Planejamento%20Sprints.svg)
+ 
+ <div id='colab'/>
+ 
+ ## 🔍Modelo Analítico
+ É possível visualizar nosso modelo analítico utilizando Machine Learning 
+ [Clicando Aqui](https://github.com/Trabalhos-Fatec/Identify-unique-user/blob/main/Modelo%20Analitico/Machine_Learning_(API).ipynb)
  
  <div id='tecnologias'/>
  
